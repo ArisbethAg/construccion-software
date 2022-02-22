@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Laboratorio 6</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+  </head>
+  <body>
+    <section class="hero is-warning">
+      <div class="hero-body">
+        <p class="title">
+          Papelería Sunrise
+        </p>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="columns is-mobile is-centered">
+        <div class="column is-half">
+          <div class="block"></div>
+          <div class="box">
+            <h1 class="title is-centered">Validación de contraseñas</h1>
+            <div class="field">
+              <label class="label">Contraseña</label>
+                <div class="control">
+                  <input id="password1" class="input is-warning" type="password" placeholder="Introduce tu contraseña">
+                </div>
+                <p id="texto" class="help"></p>
+            </div>
+            <div class="block"></div>
+            <div class="field">
+              <label class="label">Verificar contraseña</label>
+              <div class="control">
+                <input id="password2" class="input is-warning" type="password" placeholder="Verifica tu contraseña">
+              </div>
+              <p id="texto2" class="help"></p>
+            <div class="block"></div>
+            <div class="block"></div>
+            <button id="checar" class="button is-warning">Checar</button>
+            <div class="block"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="lab6.js"></script>
+  </body>
+</html>

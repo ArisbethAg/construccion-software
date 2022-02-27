@@ -5,44 +5,225 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Laboratorio 6</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
   </head>
   <body>
     <section class="hero is-warning">
       <div class="hero-body">
         <p class="title">
-          Papelería Sunrise
+          Validador de contraseñas
         </p>
       </div>
     </section>
 
     <div class="container">
-      <div class="columns is-mobile is-centered">
-        <div class="column is-half">
-          <div class="block"></div>
-          <div class="box">
-            <h1 class="title is-centered">Validación de contraseñas</h1>
-            <div class="field">
-              <label class="label">Contraseña</label>
-                <div class="control">
-                  <input id="password1" class="input is-warning" type="password" placeholder="Introduce tu contraseña">
-                </div>
-                <p id="texto" class="help"></p>
-            </div>
+        <div class="columns is-mobile is-centered">
+          <div class="column is-half">
             <div class="block"></div>
-            <div class="field">
-              <label class="label">Verificar contraseña</label>
-              <div class="control">
-                <input id="password2" class="input is-warning" type="password" placeholder="Verifica tu contraseña">
+            <div class="box">
+              <h1 class="title is-centered">Validación de contraseñas</h1>
+              <div class="field">
+                <label class="label">Contraseña</label>
+                  <div class="control">
+                    <input id="password1" class="input is-warning" type="password" placeholder="Introduce tu contraseña">
+                  </div>
+                  <div>
+                    <p id="texto" class="help"></p>
+                    <p id="texto1" class="help"></p>
+                    <p id="texto2" class="help"></p>
+                    <p id="texto3" class="help"></p>
+                  </div>
               </div>
-              <p id="texto2" class="help"></p>
-            <div class="block"></div>
-            <div class="block"></div>
-            <button id="checar" class="button is-warning">Checar</button>
-            <div class="block"></div>
+              <div class="block"></div>
+              
+              <div class="field">
+                <label class="label">Verificar contraseña</label>
+                <div class="control">
+                  <input id="password2" class="input is-warning" type="password" placeholder="Verifica tu contraseña">
+                </div>
+                <p id="texto-2" class="help"></p>
+              <div class="block"></div>
+              <div class="block"></div>
+              <button id="checar" class="button is-warning">Validar</button>
+              <div class="block"></div>
+            </div>
           </div>
         </div>
       </div>
     </div>
+
+    <div class="block"></div>
+
+    <section class="hero is-warning">
+      <div class="hero-body">
+        <div class="level-right">
+          <span id="obj" class="tag is-danger is-normal"></span>
+          <span class="icon-text">
+            <span class="icon">
+              <i class="fas fa-shopping-cart"></i>
+            </span>
+            <span>Carrito</span>
+          </span>
+        </div>
+        <p id="titulo" class="title">
+          Papelería Sunrise
+        </p>
+      </div>
+    </section>
+
+    <div class="block"></div>
+
+        <div id="change" class="tile is-ancestor mt-6 mb-6">
+          <div class="tile is-3 mx-6">
+            <div class="card">
+              <div class="card-image">
+                <figure class="image is-4by3">
+                  <img src="https://m.media-amazon.com/images/I/61wVauFRXSL.jpg" alt="Washi tapes inspiradas en obras del artista Van Gogh">
+                </figure>
+              </div>
+              <div class="card-content">
+
+                <div class="content">
+                <div class="title is-4">Washi Tapes de Van Gogh</div>
+                  Precio por unidad: $200
+                  <div class="block"></div>
+                  <div class="columns">
+                    <div class="column is-8">
+                      <input id="cantidad1" class="input is-warning" type="number" min="1" max="10" placeholder="Cantidad">
+                      <div class="block"></div>
+                      <div id="actprecio1" class="is-size-6">Precio:</div>
+                      <div id="totalprecio1" class="is-size-5 has-text-weight-bold">Total:</div>
+                      <div class="block"></div>
+                      <div class="field is-grouped">
+                        <p class="control">
+                          <button id="add1" class="button is-outlined">
+                            Agregar al carrito
+                          </button>
+                        </p>
+                        <p class="control">
+                          <button class="button is-warning">
+                            Comprar
+                          </button>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        <div class="tile is-3 mx-3">
+          <!-- Add content or other tiles -->
+            <div class="card">
+              <div class="card-image">
+                <figure class="image is-4by3">
+                  <img src="https://img.joomcdn.net/752f8ad2a139b0077d45b41bcdacafadaa0743c1_original.jpeg" alt="Marcatextos de colores">
+                </figure>
+              </div>
+              <div class="card-content">
+
+                <div class="content">
+                  <div class="title is-4">Marcatextos de colores</div>
+                    Precio por paquete de 6: $150
+                    <div class="block"></div>
+                    <div class="columns">
+                      <div class="column is-8">
+                        <input id="cantidad2" class="input is-warning" type="number" min="1" max="10" placeholder="Cantidad">
+                        <div class="block"></div>
+                        <div id="actprecio2" class="is-size-6">Precio:</div>
+                        <div id="totalprecio2" class="is-size-5 has-text-weight-bold">Total:</div>
+                        <div class="block"></div>
+                        <div class="field is-grouped">
+                          <p class="control">
+                            <button id="add2" class="button is-outlined">
+                              Agregar al carrito
+                            </button>
+                          </p>
+                          <p class="control">
+                            <button class="button is-warning">
+                              Comprar
+                            </button>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+
+
+
+        <div class="tile is-3 mx-3">
+          <!-- Add content or other tiles -->
+            <div class="card">
+              <div class="card-image">
+                <figure class="image is-4by3">
+                  <img src="https://cdn.shopify.com/s/files/1/1403/8979/products/Momo-Cat-Gel-Ink-Pen-3_grande.jpg?v=1614837409" alt="Plumas de gatitos">
+                </figure>
+              </div>
+              <div class="card-content">
+
+                <div class="content">
+                  <div id="plumas" class="title is-4">Plumas de gatitos</div>
+                    Precio por unidad: $60
+                    <div class="block"></div>
+                    <div class="columns">
+                      <div class="column is-8">
+                        <input id="cantidad3" class="input is-warning" type="number" min="1" max="10" placeholder="Cantidad">
+                        <div class="block"></div>
+                        <div id="actprecio3" class="is-size-6">Precio:</div>
+                        <div id="totalprecio3" class="is-size-5 has-text-weight-bold">Total:</div>
+                        <div class="block"></div>
+                        <div class="field is-grouped">
+                          <p class="control">
+                            <button id="add3" class="button is-outlined">
+                              Agregar al carrito
+                            </button>
+                          </p>
+                          <p class="control">
+                            <button class="button is-warning">
+                              Comprar
+                            </button>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+            </div>
+
+
+            <div id="prueba" class="columns">
+              <div class="column is-two-fifths"></div>
+                <article class="message is-small" style="height: 120px;">
+                  <div class="message-header">
+                    <p>Notificación</p>
+                    <button id="borrar" class="delete is-small" aria-label="delete"></button>
+                  </div>
+                  <div class="message-body">
+                    El color de la pluma es aleatorio.
+                  </div>
+                </article>
+              </div>
+            </div>
+
+        </div>
+      </div>
+
+    <div class="block"></div>
+
+      <footer class="footer">
+        <div class="content has-text-centered">
+          <p>
+            <strong>Bulma</strong> by <a href="https://jgthms.com">Jeremy Thomas</a>. The source code is licensed
+            <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content
+            is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.
+          </p>
+        </div>
+      </footer>
+
     <script src="lab6.js"></script>
   </body>
 </html>

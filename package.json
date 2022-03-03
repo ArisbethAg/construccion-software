@@ -1,0 +1,29 @@
+{
+  "name": "construccion-software",
+  "version": "1.0.0",
+  "description": "Código de clases de construcción de software",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ArisbethAg/construccion-software.git"
+  },
+  "keywords": [
+    "node"
+  ],
+  "author": "Arisbeth Aguirre",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ArisbethAg/construccion-software/issues"
+  },
+  "homepage": "https://github.com/ArisbethAg/construccion-software#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  },
+  "dependencies": {
+    "express": "^4.17.3"
+  }
+}

@@ -1,0 +1,32 @@
+<%- include('includes/head.ejs') %>
+
+    <body>
+        <section class="hero is-warning">
+            <div class="hero-body">
+                <p class="title">Autores registrados</p>
+            </div>
+        </section>
+        <div class="container">
+            <div class="columns is-mobile is-centered">
+                <div class="column is-half">
+                    <div class="block"></div>
+                    <div class="box">
+                        <h1 class="title is-centered">Lista de Autores registrados: </h1>
+
+                        <% for (let i=0; i < array_autores.length; i++){%>
+                            <li>
+                                <%= array_autores[i]%>
+                            </li>
+                            <% } %>
+                                <br>
+                                <a href="/registros/libros/librosregistrados">Ver lista de libros registrados</a>
+                                <br>
+                                <br>
+                                <a href="/registros">Registrar libros y/o autores</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="block"></div>
+        <br>
+<%- include('includes/foot.ejs') %>

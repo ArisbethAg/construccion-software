@@ -1,0 +1,32 @@
+<%- include('includes/head.ejs') %>
+
+    <body>
+        <section class="hero is-warning">
+            <div class="hero-body">
+                <p class="title">Registra Autores</p>
+            </div>
+        </section>
+        <div class="container">
+            <div class="columns is-mobile is-centered">
+                <div class="column is-half">
+                    <div class="block"></div>
+                    <div class="box">
+                        <h1 class="title is-centered">Registro de Autores</h1>
+                        <div class="field">
+                            <form action="/registros/autores" method="POST"><label for="nombre" id="nombre"
+                                    name="nombre" class="label">Autor</label>
+                                <div class="control"><input class="input is-warning" id="nombre" name="nombre"
+                                        type="text" placeholder="Introduce el nombre del autor"></div>
+                        </div>
+                        <div class="block"></div>
+                        <div class="block"></div><button id="checar" class="button is-warning">Registrar</button></form>
+                        <div class="block"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="block"></div>
+        <br>
+
+<%- include('includes/foot.ejs') %>

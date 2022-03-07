@@ -1,0 +1,30 @@
+<%- include('includes/head.ejs') %>
+
+<body>
+    <section class="hero is-warning">
+        <div class="hero-body">
+            <p class="title">Registrar Libros</p>
+        </div>
+    </section>
+    <div class="container">
+        <div class="columns is-mobile is-centered">
+            <div class="column is-half">
+                <div class="block"></div>
+                <div class="box">
+                    <h1 class="title is-centered">Registro de Libros</h1>
+                    <div class="field">
+                        <form action="/registros/libros" method="POST"><label for="nombre1" id="nombre1" name="nombre1"
+                                class="label">Nombre del libro</label>
+                            <div class="control"><input class="input is-warning" id="nombre1" name="nombre1" type="text"
+                                    placeholder="Introduce el título del libro"></div>
+                    </div>
+                    <div class="block"></div>
+                    <div class="block"></div><button id="checar" class="button is-warning">Registrar</button></form>
+                    <div class="block"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="block"></div>
+    <br>
+<%- include('includes/foot.ejs') %>

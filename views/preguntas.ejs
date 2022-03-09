@@ -1,0 +1,43 @@
+<%- include('includes/head.ejs') %>
+
+<body>
+    <section class="hero is-warning">
+        <div class="hero-body">
+            <p class="title">Preguntas</p>
+        </div>
+    </section>
+    <div class="container">
+        <div class="columns is-mobile is-centered">
+            <div class="column is-half">
+                <div class="block"></div>
+                <div class="box">
+                    <h1 class="title is-centered">Preguntas de Laboratorios</h1>
+
+                    <div class="block"></div><strong>Descripción del archivo package.json: </strong><br>
+                    <div> El archivo package.json es la base de los proyectos en node, en el se encuentra algunas de las
+                        características principales de nuestro prroyecto como el nombre, autor, repositorio, licencia,
+                        así como las dependencias y paquetes instalados para el mismo.</div>
+                    
+                    <div class="block"></div><strong>¿Qué otros templating engines existen para node?</strong><br>
+                    <div> Existen diversos templating engines para node como lo son:
+                        <li>Pug</li>
+                        <li>Eta</li>
+                        <li>hbs</li>
+                        <li>LiquidJS</li>
+                        <li>Blade</li>
+                        <li>Twing</li>
+                    <div class="block"></div>
+                    </div>
+                    <div class="block"></div><strong>¿Qué beneficios encuentras en el estilo MVC?</strong><br>
+                    <div> Que así el código es mucho más fácil de entender e incluso es más fácil conceptualizar las funcionalidades que queremos incluir en nuestro código, pues desde antes nos ayuda a separar los datos, la interfaz y las respuestas del servidor. </div>
+                    <div class="block"></div><strong>¿Encuentras alguna desventaja en el estilo arquitectónico MVC?</strong><br>
+                    <div> Tal vez el hecho de que se generan muchos archivos, lo cual al inicio es un poco confuso cuando hay algún error, porque a veces no es tan fácil identificar de que parte del proyecto es la que está fallando. </div>
+
+                    <br><br>
+                    <a href="/registros">Regresar a página principal</a>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="block"></div>
+    <%- include('includes/foot.ejs') %>

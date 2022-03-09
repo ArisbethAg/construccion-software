@@ -2,42 +2,26 @@ const express = require('express');
 const path = require('path');
 const router = express.Router();
 
-const array_autores = [];
-const array_libros= [];
+const librosController = require('../controllers/libros_controller');
 
-router.use('/libros/librosregistrados', (request, response, next) => {
-    response.render('libros_reg', {array_libros:array_libros});
-});
+router.use('/preguntas', librosController.preguntas);
 
-router.use('/autores/autoresregistrados', (request, response, next) => {
-    response.render('autores_reg', {array_autores:array_autores});
-});
+router.use('/recomendaciones', librosController.recomendaciones);
 
-router.get('/libros', (request, response, next) => {
-    response.render('libros');
-});
+router.use('/libros/librosregistrados', librosController.libros_registrados);
 
-router.post('/libros', (request, response, next) => {
-    array_libros.push(request.body.nombre1);
-    response.render('libros_post.ejs');
-});
+router.use('/autores/autoresregistrados', librosController.autores_registrados);
 
-router.get('/autores', (request, response, next) =>{
-    response.render('autores');
-});
+router.get('/libros', librosController.get_libros);
 
-router.post('/autores', (request, response, next) => {
-    array_autores.push(request.body.nombre);
-    response.render('autores_post');
-});
+router.post('/libros', librosController.post_libros);
 
-router.use('/', (request, response, next) => {
-    response.sendFile(path.join(__dirname, '..', 'views', 'menu_view.html'));
-});
+router.get('/autores', librosController.get_autores);
 
-router.all('*',(request, response, next) => {
-    console.log('404');
-    response.status(404).render('error404_message');
-});
+router.post('/autores', librosController.post_autores);
+
+router.use('/', librosController.menu);
+
+router.all('*', librosController.error);
 
 module.exports = router;

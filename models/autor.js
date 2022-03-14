@@ -1,4 +1,5 @@
 const array_autores = [];
+//const db = require('../util/database');
 
 module.exports = class Autor {
 

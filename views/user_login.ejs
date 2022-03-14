@@ -1,0 +1,33 @@
+<%- include('includes/head.ejs') %>
+            <p class="title">Autenticar Usuario</p>
+        </div>
+    </section>
+    <div class="container">
+        <div class="columns is-mobile is-centered">
+            <div class="column is-half">
+                <div class="block"></div>
+                <div class="box">
+                    <h1 class="title is-centered">Autenticación de Usuario</h1>
+                    <div class="field">
+                        <form action="/usuarios/login" method="POST">
+                            <label for="username" class="label">Nombre</label>
+                            <div class="control">
+                                <input class="input is-warning" id="username" name="username" type="text" placeholder="Introduce tu nombre">
+                            </div>
+                            <div class="block"></div>
+                            <label for="password_user" id="password_user" name="password_user" class="label">Contraseña</label>
+                                <div class="control">
+                                    <input class="input is-warning" id="password_user" name="password_user" type="password" placeholder="Introduce tu contraseña">
+                                </div>
+                    </div>
+                    <div class="block"></div>
+                    <div class="block"></div><input type="submit" value="Enviar"></form>
+                    <div class="block"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="block"></div>
+    <br>
+<%- include('includes/foot.ejs') %>

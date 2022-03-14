@@ -1,0 +1,35 @@
+<%- include('includes/head.ejs') %>
+            <p class="title">Registrar Libros y Autores</p>
+        </div>
+    </section>
+    <div class="container">
+        <div class="columns is-mobile is-centered">
+            <div class="column is-half">
+                <div class="block"></div>
+                <div class="box">
+                    <h1 class="title is-centered">Registro de Libros y Autores</h1>
+                    <div class="field">
+                        <% if (username != '') { %>
+                            <h2><strong>Hola <%= username%>,</strong></h2>
+                        <% } %>
+                        <form>
+                            <label class="label">Selecciona lo que desees registrar:</label>
+                            <div class="control"></div>
+                    </div>
+                    <div class="block"></div>
+                    <div class="block"></div>
+                    <a href="/registros/libros">Registrar libros</a><br>
+                    <div class="block"></div>
+                    <a href="/registros/autores">Registrar autores </a><br>
+                    <div class="block"></div>
+                    <a href="/registros/recomendaciones">Recibir recomendaciones literarias </a><br>
+                    <div class="block"></div>
+                    <a href="/registros/preguntas">Ver preguntas de laboratorios </a><br>
+                    </form>
+                    <div class="block"></div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="block"></div>
+<%- include('includes/foot.ejs') %>

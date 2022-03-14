@@ -9,3 +9,17 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
 </head>
+
+<body>
+    <section class="hero is-warning">
+        <div class="hero-body">
+            <nav class="navbar is-warning">
+                <div class="navbar-end">
+                    <% if (username != '') { %>
+                        <a class="navbar-item" href="/usuarios/logout">
+                            
+                            <%= username%> | Salir 
+                        </a>
+                    <% } %>
+                </div>
+            </nav>

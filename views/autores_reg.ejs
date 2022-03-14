@@ -1,7 +1,4 @@
 <%- include('includes/head.ejs') %>
-    <body>
-        <section class="hero is-warning">
-            <div class="hero-body">
                 <p class="title">Autores registrados</p>
             </div>
         </section>
@@ -17,8 +14,13 @@
                                 <%= array_autores[i].nombre %>
                             </li>
                             <% } %>
+                        <% if (ultimo_autor != '') {%>
+                            <div class="block"></div>
+                            <div> El último autor registrado fue: <strong><%= ultimo_autor %></strong></div> 
+
+                        <% } %>
                                 <br>
-                                <a href="/registros/libros/librosregistrados">Ver lista de libros registrados</a>
+                                <a href="/registros/librosregistrados">Ver lista de libros registrados</a>
                                 <br>
                                 <br>
                                 <a href="/registros">Regresar a la página principal</a>

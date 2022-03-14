@@ -1,8 +1,4 @@
 <%- include('includes/head.ejs') %>
-
-<body>
-    <section class="hero is-warning">
-        <div class="hero-body">
             <p class="title">Registrar Libros</p>
         </div>
     </section>
@@ -13,10 +9,17 @@
                 <div class="box">
                     <h1 class="title is-centered">Registro de Libros</h1>
                     <div class="field">
-                        <form action="/registros/libros" method="POST"><label for="nombre1" id="nombre1" name="nombre1"
-                                class="label">Nombre del libro</label>
-                            <div class="control"><input class="input is-warning" id="nombre1" name="nombre1" type="text"
-                                    placeholder="Introduce el título del libro"></div>
+                        <form action="/registros/libros" method="POST">
+                            <label for="nombre1" id="nombre1" name="nombre1"class="label">Nombre del libro</label>
+                            <div class="control">
+                                <input class="input is-warning" id="nombre1" name="nombre1" type="text"placeholder="Introduce el título del libro">
+                            </div>
+                            <div class="block"></div>
+                            <label for="paginas" id="paginas" name="paginas"class="label">Número de páginas del libro</label>
+                            <div class="control">
+                                <input class="input is-warning" id="paginas" name="paginas" type="number" min="1" placeholder="Ej. 100">
+                            </div>
+
                     </div>
                     <div class="block"></div>
                     <div class="block"></div><button id="checar" class="button is-warning">Registrar</button></form>

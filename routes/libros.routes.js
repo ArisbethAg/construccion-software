@@ -8,9 +8,9 @@ router.use('/preguntas', librosController.preguntas);
 
 router.use('/recomendaciones', librosController.recomendaciones);
 
-router.use('/libros/librosregistrados', librosController.libros_registrados);
+router.use('/librosregistrados', librosController.libros_registrados);
 
-router.use('/autores/autoresregistrados', librosController.autores_registrados);
+router.use('/autoresregistrados', librosController.autores_registrados);
 
 router.get('/libros', librosController.get_libros);
 

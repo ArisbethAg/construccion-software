@@ -1,0 +1,37 @@
+<%- include('includes/head.ejs') %>
+            <p class="title">Modificación de datos de autor</p>
+        </div>
+    </section>
+    <div class="container">
+        <div class="columns is-mobile is-centered">
+            <div class="column is-half">
+                <div class="block"></div>
+                <div class="box">
+                    <h1 class="title is-centered">Modificar datos de autor</h1>
+                    <div class="field">
+                        <form action="/registros/modificarautor" method="POST">
+                            <label for="idautor" id="idautor" name="idautor"class="label">Id del autor</label>
+                            <div class="control">
+                                <input class="input is-warning" id="idautor" name="idautor" type="number" min="1" placeholder="Ejemplo: 1">
+                            </div>
+                            <div class="block"></div>
+                            <label for="nombreautor" id="nombreautor" name="nombreautor"class="label">Nombre del autor</label>
+                            <div class="control">
+                                <input class="input is-warning" id="nombreautor" name="nombreautor" type="text" placeholder="Introduce el nombre del autor">
+                            </div>
+                            <div class="block"></div>
+                            <label for="apellidoautor" id="apellidoautor" name="apellidoautor"class="label">Apellido del autor</label>
+                            <div class="control">
+                                <input class="input is-warning" id="apellidoautor" name="apellidoautor" type="text" placeholder="Introduce el apellido del autor">
+                            </div>
+                    </div>
+                    <div class="block"></div>
+                    <div class="block"></div><button id="checar" class="button is-warning">Modificar</button></form>
+                    <div class="block"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="block"></div>
+    <br>
+<%- include('includes/foot.ejs') %>

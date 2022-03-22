@@ -9,11 +9,12 @@
                     <div class="box">
                         <h1 class="title is-centered">Lista de Autores registrados: </h1>
 
-                        <% for (let i=0; i < array_autores.length; i++){ %>
+                        <% for (let autor of autores){ %>
                             <li>
-                                <%= array_autores[i].nombre %>
+                                <%= autor.nombre %>
+                                <%= autor.apellido %>
                             </li>
-                            <% } %>
+                        <% } %> 
                         <% if (ultimo_autor != '') {%>
                             <div class="block"></div>
                             <div> El último autor registrado fue: <strong><%= ultimo_autor %></strong></div> 

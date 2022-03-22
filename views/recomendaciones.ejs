@@ -11,15 +11,11 @@
                         <% function numero_random(min, max) { %> 
                             <% return Math.floor(Math.random() * (max - min + 1) + min); %>
                         <% } %> 
-                        <% if (array_libros.length < 1) {%>
-                            <div>No te podemos recomendar libros porque aún no hay registros en la página.</div><br>
-                        <% } else{ %>
-                            <div>La página te sugiere que leas el siguiente libro: <strong><%= array_libros[numero_random(0, array_libros.length)].nombre1 %></strong></div><br>
-                        <% } %>
-                        <% if (array_autores.length < 1) {%>
-                            <div>No te podemos dar recomendaciones de autores porque aún no hay registros de autores en la página.</div>
-                        <% } else{ %>
-                            <div>La página te sugiere que leas obras de: <strong><%= array_autores[numero_random(0, array_autores.length)].nombre %></strong></div>
+                        <% let num_lib = numero_random(0, libros.length); %>
+                        <% for (let libro of libros){ %>
+                            <% if (libro.idLibro == num_lib) {%>
+                                <div>La página te sugiere que leas el siguiente libro: <strong><%= libro.titulo %></strong></div><br>
+                            <% } %>
                         <% } %>
                             <br><a href="/registros/autoresregistrados">Ver lista de autores
                                 registrados</a>

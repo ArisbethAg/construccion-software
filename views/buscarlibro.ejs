@@ -1,0 +1,28 @@
+<%- include('includes/head.ejs') %>
+            <p class="title">Buscar Libros</p>
+        </div>
+    </section>
+    <div class="container">
+        <div class="columns is-mobile is-centered">
+            <div class="column is-half">
+                <div class="block"></div>
+                <div class="box">
+                    <h1 class="title is-centered">Buscar Libros</h1>
+                    <div class="field">
+                        <form action="/registros/buscarlibro" method="POST">
+                            <label for="palabras" id="palabras" name="palabras"class="palabras">Nombre o palabra clave del título del libro</label>
+                            <div class="control">
+                                <input class="input is-warning" id="palabras" name="palabras" type="text"placeholder="Alicia en el país de las maravillas">
+                            </div>
+                            <div class="block"></div>
+                    </div>
+                    <div class="block"></div>
+                    <div class="block"></div><button id="checar" class="button is-warning">buscar</button></form>
+                    <div class="block"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="block"></div>
+    <br>
+<%- include('includes/foot.ejs') %>

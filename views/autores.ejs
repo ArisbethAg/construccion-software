@@ -9,10 +9,16 @@
                     <div class="box">
                         <h1 class="title is-centered">Registro de Autores</h1>
                         <div class="field">
-                            <form action="/registros/autores" method="POST"><label for="nombre" id="nombre"
-                                    name="nombre" class="label">Autor</label>
-                                <div class="control"><input class="input is-warning" id="nombre" name="nombre"
-                                        type="text" placeholder="Introduce el nombre del autor"></div>
+                            <form action="/registros/autores" method="POST">
+                                <label for="nombre" id="nombre" name="nombre" class="label">Nombre del autor</label>
+                                <div class="control">
+                                    <input class="input is-warning" id="nombre" name="nombre" type="text" placeholder="Introduce el nombre del autor">
+                                </div>
+                                <div class="block"></div>
+                                <label for="apellido" id="apellido" name="apellido"class="label">Apellido del autor</label>
+                                <div class="control">
+                                    <input class="input is-warning" id="apellido" name="apellido" type="text" placeholder="Introduce el apellido del autor">
+                                </div>
                         </div>
                         <div class="block"></div>
                         <div class="block"></div><button id="checar" class="button is-warning">Registrar</button></form>

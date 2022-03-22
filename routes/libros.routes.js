@@ -6,6 +6,14 @@ const librosController = require('../controllers/libros_controller');
 
 router.use('/preguntas', librosController.preguntas);
 
+router.get('/modificarautor', librosController.modificarautor);
+
+router.post('/modificarautor', librosController.modificarautor_post);
+
+router.get('/buscarlibro', librosController.buscarlibro);
+
+router.post('/buscarlibro', librosController.buscarlibro_post);
+
 router.use('/recomendaciones', librosController.recomendaciones);
 
 router.use('/librosregistrados', librosController.libros_registrados);

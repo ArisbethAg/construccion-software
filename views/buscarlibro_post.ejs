@@ -1,5 +1,5 @@
 <%- include('includes/head.ejs') %>
-                <p class="title">Libros registrados</p>
+                <p class="title">Libros encontrados</p>
             </div>
         </section>
         <div class="container">
@@ -7,7 +7,7 @@
                 <div class="column is-half">
                     <div class="block"></div>
                     <div class="box">
-                        <h1 class="title is-centered">Lista de Libros registrados: </h1>
+                        <h1 class="title is-centered">Lista de libros con el título o palabras que buscabas: </h1>
 
                         <% for (let libro of libros){ %>
                             <li>
@@ -15,15 +15,7 @@
                             </li>
                         <% } %> 
                         
-                        <% if (ultimo_libro != '') {%>
-                            <div class="block"></div>
-                            <div> El último libro registrado fue: <strong><%= ultimo_libro %></strong>, el cual tiene <strong><%= ultima_pagina%> páginas.</strong></div> 
-
-                        <% } %>
-                            <br><a href="/registros/autoresregistrados">Ver lista de autores
-                                registrados</a>
-                                <br
-                                ><br>
+                        <div class="box">
                                 <a href="/registros">Regresar a la página principal</a>
                     </div>
                 </div>

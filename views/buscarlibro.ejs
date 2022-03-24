@@ -10,7 +10,8 @@
                     <h1 class="title is-centered">Buscar Libros</h1>
                     <div class="field">
                         <form action="/registros/buscarlibro" method="POST">
-                            <label for="palabras" id="palabras" name="palabras"class="palabras">Nombre o palabra clave del título del libro</label>
+                            <input type="hidden" name="_csrf" value="<%= csrfToken %>" >
+                            <label for="palabras" id="palabras" name="palabras"class="label">Nombre o palabra clave del título del libro</label>
                             <div class="control">
                                 <input class="input is-warning" id="palabras" name="palabras" type="text"placeholder="Alicia en el país de las maravillas">
                             </div>

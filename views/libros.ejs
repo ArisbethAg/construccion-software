@@ -10,6 +10,7 @@
                     <h1 class="title is-centered">Registro de Libros</h1>
                     <div class="field">
                         <form action="/registros/libros" method="POST">
+                            <input type="hidden" name="_csrf" value="<%= csrfToken %>" >
                             <label for="nombre1" id="nombre1" name="nombre1"class="label">Nombre del libro</label>
                             <div class="control">
                                 <input class="input is-warning" id="nombre1" name="nombre1" type="text"placeholder="Introduce el título del libro">

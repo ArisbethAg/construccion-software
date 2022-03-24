@@ -1,14 +1,30 @@
-const array_users = [];
+const db = require('../util/database');
+const bcrypt = require('bcryptjs');
 
 module.exports = class User {
 
-    constructor(nuevo_username, nueva_password) {
+    constructor(nuevo_nombre, nuevo_username, nueva_password) {
+        this.nombre = nuevo_nombre;
         this.username = nuevo_username;
         this.password = nueva_password;
     }
 
     save() {
-        array_users.push(this);
+        console.log('holis');
+        return bcrypt.hash(this.password, 12)
+            .then((password_cifrado)=>{
+                console.log('holis2');
+                console.log(password_cifrado.length);
+                return db.execute('INSERT INTO USUARIO(nombre, username, password) VALUES(?,?,?)',
+                    [this.nombre, this.username, password_cifrado]);
+        }).catch((error)=>{
+            console.log(error);
+        });
+    }
+
+    static findOne(username) {
+        return db.execute('SELECT * FROM USUARIO WHERE username=?',
+            [username]);
     }
 
     static login(username, password) {

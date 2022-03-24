@@ -10,6 +10,7 @@
                         <h1 class="title is-centered">Registro de Autores</h1>
                         <div class="field">
                             <form action="/registros/autores" method="POST">
+                                <input type="hidden" name="_csrf" value="<%= csrfToken %>" >
                                 <label for="nombre" id="nombre" name="nombre" class="label">Nombre del autor</label>
                                 <div class="control">
                                     <input class="input is-warning" id="nombre" name="nombre" type="text" placeholder="Introduce el nombre del autor">

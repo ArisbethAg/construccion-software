@@ -10,6 +10,7 @@
                     <h1 class="title is-centered">Modificar datos de autor</h1>
                     <div class="field">
                         <form action="/registros/modificarautor" method="POST">
+                            <input type="hidden" name="_csrf" value="<%= csrfToken %>" >
                             <label for="idautor" id="idautor" name="idautor"class="label">Id del autor</label>
                             <div class="control">
                                 <input class="input is-warning" id="idautor" name="idautor" type="number" min="1" placeholder="Ejemplo: 1">

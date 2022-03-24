@@ -1,5 +1,5 @@
 <%- include('includes/head.ejs') %>
-            <p class="title">Autenticar Usuario</p>
+            <p class="title">Registrar Usuario</p>
         </div>
     </section>
     <div class="container">
@@ -7,13 +7,18 @@
             <div class="column is-half">
                 <div class="block"></div>
                 <div class="box">
-                    <h1 class="title is-centered">Autenticación de Usuario</h1>
+                    <h1 class="title is-centered">Registro de Usuario</h1>
                     <div class="field">
-                        <form action="/usuarios/login" method="POST">
+                        <form action="/usuarios/signup" method="POST">
                             <input type="hidden" name="_csrf" value="<%= csrfToken %>" >
-                            <label for="username" class="label">Nombre</label>
+                            <label for="name" class="label">Nombre</label>
                             <div class="control">
-                                <input class="input is-warning" id="username" name="username" type="text" placeholder="Introduce tu nombre">
+                                <input class="input is-warning" id="name" name="name" type="text" placeholder="Introduce tu nombre">
+                            </div>
+                            <div class="block"></div>
+                            <label for="username" class="label">Username</label>
+                            <div class="control">
+                                <input class="input is-warning" id="username" name="username" type="text" placeholder="Introduce tu username">
                             </div>
                             <div class="block"></div>
                             <label for="password_user" id="password_user" name="password_user" class="label">Contraseña</label>
@@ -21,10 +26,8 @@
                                     <input class="input is-warning" id="password_user" name="password_user" type="password" placeholder="Introduce tu contraseña">
                                 </div>
                     </div>
-                    <a href="/usuarios/signup">¿No tienes una cuenta? Regístrate</a><br>
                     <div class="block"></div>
-                    <div class="block"></div>
-                    <div class="block"></div><button id="checar" class="button is-warning">Enviar</button></form>
+                    <div class="block"></div><button id="checar" class="button is-warning">Registrar</button></form>
                     <div class="block"></div>
                 </div>
             </div>

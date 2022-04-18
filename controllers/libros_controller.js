@@ -3,6 +3,13 @@ const Autor = require('../models/autor');
 const Libro = require('../models/libro');
 const db = require('../util/database');
 
+exports.reviews = (request, response, next) => {
+    response.render('reseñas_literarias',
+        {
+            username: request.session.username ? request.session.username : '',
+            imagen: request.session.imagen ? request.session.imagen : '',
+        });
+};
 
 exports.modificarautor = (request, response, next) => {
     response.render('modificarautor',

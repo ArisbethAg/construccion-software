@@ -5,6 +5,8 @@ const isAuth = require('../util/is-auth.js');
 
 const librosController = require('../controllers/libros_controller');
 
+router.use('/reviews', isAuth, librosController.reviews);
+
 router.use('/preguntas', isAuth, librosController.preguntas);
 
 router.get('/modificarautor', isAuth, librosController.modificarautor);

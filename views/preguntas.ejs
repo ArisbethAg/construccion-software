@@ -1,6 +1,6 @@
 <%- include('includes/head.ejs') %>
-            <p class="title">Preguntas</p>
-        </div>
+    <p class="title">Preguntas</p>
+    </div>
     </section>
     <div class="container">
         <div class="columns is-mobile is-centered">
@@ -13,7 +13,7 @@
                     <div> El archivo package.json es la base de los proyectos en node, en el se encuentra algunas de las
                         características principales de nuestro prroyecto como el nombre, autor, repositorio, licencia,
                         así como las dependencias y paquetes instalados para el mismo.</div>
-                    
+
                     <div class="block"></div><strong>¿Qué otros templating engines existen para node?</strong><br>
                     <div> Existen diversos templating engines para node como lo son:
                         <li>Pug</li>
@@ -22,42 +22,81 @@
                         <li>LiquidJS</li>
                         <li>Blade</li>
                         <li>Twing</li>
-                    <div class="block"></div>
+                        <div class="block"></div>
                     </div>
                     <div class="block"></div><strong>¿Qué beneficios encuentras en el estilo MVC?</strong><br>
-                    <div> Que así el código es mucho más fácil de entender e incluso es más fácil conceptualizar las funcionalidades que queremos incluir en nuestro código, pues desde antes nos ayuda a separar los datos, la interfaz y las respuestas del servidor. </div>
-                    <div class="block"></div><strong>¿Encuentras alguna desventaja en el estilo arquitectónico MVC?</strong><br>
-                    <div> Tal vez el hecho de que se generan muchos archivos, lo cual al inicio es un poco confuso cuando hay algún error, porque a veces no es tan fácil identificar de que parte del proyecto es la que está fallando. </div>
-                    
-                    <div class="block"></div><strong>¿Qué ventajas tiene escribir el código SQL únicamente en la capa del modelo?</strong><br>
-                    <div>Debido a que la capa del modelo es la encargada del manejo de datos es más fácil manejar, administrar y modificar el código de SQL, pues es la única de nuestras capas en la que lo estaremos manejando. </div>
+                    <div> Que así el código es mucho más fácil de entender e incluso es más fácil conceptualizar las
+                        funcionalidades que queremos incluir en nuestro código, pues desde antes nos ayuda a separar los
+                        datos, la interfaz y las respuestas del servidor. </div>
+                    <div class="block"></div><strong>¿Encuentras alguna desventaja en el estilo arquitectónico
+                        MVC?</strong><br>
+                    <div> Tal vez el hecho de que se generan muchos archivos, lo cual al inicio es un poco confuso
+                        cuando hay algún error, porque a veces no es tan fácil identificar de que parte del proyecto es
+                        la que está fallando. </div>
+
+                    <div class="block"></div><strong>¿Qué ventajas tiene escribir el código SQL únicamente en la capa
+                        del modelo?</strong><br>
+                    <div>Debido a que la capa del modelo es la encargada del manejo de datos es más fácil manejar,
+                        administrar y modificar el código de SQL, pues es la única de nuestras capas en la que lo
+                        estaremos manejando. </div>
                     <div class="block"></div><strong>¿Qué es SQL injection y cómo se puede prevenir?</strong><br>
-                    <div>Es un tipo de ataque cibernético que un sitio web puede recibir cuando el usuario en alguna de las formas manda como respuesta un código de sql, este se puede prevenir protegiendo nuestras consultas, de manera más específica, pasando nuestros valores de las consultas de forma indirecta (a través del uso de ?), para que así, si se trata de inyectar código de sql sea interpretado como un string.</div>
+                    <div>Es un tipo de ataque cibernético que un sitio web puede recibir cuando el usuario en alguna de
+                        las formas manda como respuesta un código de sql, este se puede prevenir protegiendo nuestras
+                        consultas, de manera más específica, pasando nuestros valores de las consultas de forma
+                        indirecta (a través del uso de ?), para que así, si se trata de inyectar código de sql sea
+                        interpretado como un string.</div>
 
                     <div class="block"></div><strong>¿Qué otras formas de autentificación existen?</strong><br>
-                    <div>Además de la autentificación básica HTTP, existe la autentificación por cookies, tokens de sesión y tokens de aplicación (R Marketing Digital, s.f. & A3Sec, 2020). </div>
+                    <div>Además de la autentificación básica HTTP, existe la autentificación por cookies, tokens de
+                        sesión y tokens de aplicación (R Marketing Digital, s.f. & A3Sec, 2020). </div>
 
                     <div class="block"></div><strong>¿En qué consiste el control de acceso basado en roles?</strong><br>
-                    <div>Es una función de seguridad que se emplea para administrar las funciones y transacciones disponibles para los usuarios de acuerdo a sus roles. (Ferraiolo, D. & Kuhn, R., 1992)</div>
+                    <div>Es una función de seguridad que se emplea para administrar las funciones y transacciones
+                        disponibles para los usuarios de acuerdo a sus roles. (Ferraiolo, D. & Kuhn, R., 1992)</div>
+
+                    <div class="block"></div><strong>¿Qué importancia tiene AJAX en el desarrollo de RIA's (Rich
+                        Internet Applications?</strong><br>
+                    <div>El usar Ajax, debido a su naturaleza asíncrona nos ayuda a desarrollar aplicaciones más
+                        dinámicas, flexibles y rápidas.</div>
+
+                    <div class="block"></div><strong>¿Qué implicaciones de seguridad tiene AJAX? ¿Dónde se deben hacer
+                        las validaciones de seguridad, del lado del cliente o
+                        del lado del servidor?</strong><br>
+                    <div>Al usar Ajax somos susceptibles a ataques de usuarios como CSRF, XSS y SQL Injection, por lo
+                        que, para evitarlos es necesario el uso de validaciones de seguridad del lado del cliente.</div>
+
+                    <div class="block"></div><strong>¿Qué es JSON?</strong><br>
+                    <div>JSON o JavaScript Object Notation, es el formato de intercambio de datos de JavaScript.</div>
+
+                    <div class="block"></div><strong>¿Qué ventajas y desventajas tiene la integración de tus
+                        aplicaciones web con servicios web desarrollados por terceros?</strong><br>
+                    <div>Las ventajas son que permiten un desarrollo más independiente de la aplicación, así como la
+                        portabilidad, usabilidad y un tiempo menor de desarrollo. Por otro lado algunas de suus
+                        desventajas son que estas se encuentran sujetas a cambios y disponibilidad.</div>
 
                     <div class="block"></div><strong>Referencias</strong><br>
                     <div>
                         <li>
-                            R Marketing Digital (s.f.) "Métodos De Autenticación Web Explicados". Recuperado el 23/03/2022 de: <a href="https://rmarketingdigital.com/javascript/metodos-de-autenticacion-web-explicados/">https://rmarketingdigital.com/javascript/metodos-de-autenticacion-web-explicados/</a>
+                            R Marketing Digital (s.f.) "Métodos De Autenticación Web Explicados". Recuperado el
+                            23/03/2022 de: <a
+                                href="https://rmarketingdigital.com/javascript/metodos-de-autenticacion-web-explicados/">https://rmarketingdigital.com/javascript/metodos-de-autenticacion-web-explicados/</a>
                         </li>
                         <li>
-                            A3Sec (2020) "Mecanismos de Autenticación Web". Recuperado el 23/03/2022 de: <a href="https://blog.a3sec.com/autenticaci%C3%B3n-de-acceso-b%C3%A1sica-http">https://blog.a3sec.com/autenticaci%C3%B3n-de-acceso-b%C3%A1sica-http</a>
+                            A3Sec (2020) "Mecanismos de Autenticación Web". Recuperado el 23/03/2022 de: <a
+                                href="https://blog.a3sec.com/autenticaci%C3%B3n-de-acceso-b%C3%A1sica-http">https://blog.a3sec.com/autenticaci%C3%B3n-de-acceso-b%C3%A1sica-http</a>
                         </li>
                         <li>
-                            Ferraiolo, D. & Kuhn, R. (1992) "Role-Based Access Controls ". Recuperado el 23/03/2021 de: <a href="https://csrc.nist.gov/CSRC/media/Publications/conference-paper/1992/10/13/role-based-access-controls/documents/ferraiolo-kuhn-92.pdf">https://csrc.nist.gov/CSRC/media/Publications/conference-paper/1992/10/13/role-based-access-controls/documents/ferraiolo-kuhn-92.pdf</a>
+                            Ferraiolo, D. & Kuhn, R. (1992) "Role-Based Access Controls ". Recuperado el 23/03/2021 de:
+                            <a
+                                href="https://csrc.nist.gov/CSRC/media/Publications/conference-paper/1992/10/13/role-based-access-controls/documents/ferraiolo-kuhn-92.pdf">https://csrc.nist.gov/CSRC/media/Publications/conference-paper/1992/10/13/role-based-access-controls/documents/ferraiolo-kuhn-92.pdf</a>
                         </li>
-                    </div>    
+                    </div>
 
                     <br><br>
                     <a href="/registros">Regresar a página principal</a>
+                </div>
             </div>
         </div>
-    </div>
     </div>
     <div class="block"></div>
     <%- include('includes/foot.ejs') %>

@@ -15,11 +15,16 @@
         <div class="hero-body">
             <nav class="navbar is-warning">
                 <div class="navbar-end">
-                    <% if (username != '') { %>
+                    <% if (username !='' ) { %>
+
+                        <figure class="image is-32x32">
+                            <img class="is-rounded" class="activator" src="<%=imagen%>">
+                        </figure>
+
                         <a class="navbar-item" href="/usuarios/logout">
-                            
-                            <%= username%> | Salir 
+
+                            <%= username%> | Salir
                         </a>
-                    <% } %>
+                        <% } %>
                 </div>
             </nav>

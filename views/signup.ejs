@@ -1,6 +1,6 @@
 <%- include('includes/head.ejs') %>
-            <p class="title">Registrar Usuario</p>
-        </div>
+    <p class="title">Registrar Usuario</p>
+    </div>
     </section>
     <div class="container">
         <div class="columns is-mobile is-centered">
@@ -9,22 +9,46 @@
                 <div class="box">
                     <h1 class="title is-centered">Registro de Usuario</h1>
                     <div class="field">
-                        <form action="/usuarios/signup" method="POST">
-                            <input type="hidden" name="_csrf" value="<%= csrfToken %>" >
+                        <form action="/usuarios/signup" method="POST" enctype="multipart/form-data">
+                            <input type="hidden" name="_csrf" value="<%= csrfToken %>">
                             <label for="name" class="label">Nombre</label>
                             <div class="control">
-                                <input class="input is-warning" id="name" name="name" type="text" placeholder="Introduce tu nombre">
+                                <input class="input is-warning" id="name" name="name" type="text"
+                                    placeholder="Introduce tu nombre">
                             </div>
                             <div class="block"></div>
                             <label for="username" class="label">Username</label>
                             <div class="control">
-                                <input class="input is-warning" id="username" name="username" type="text" placeholder="Introduce tu username">
+                                <input class="input is-warning" id="username" name="username" type="text"
+                                    placeholder="Introduce tu username">
                             </div>
                             <div class="block"></div>
-                            <label for="password_user" id="password_user" name="password_user" class="label">Contraseña</label>
-                                <div class="control">
-                                    <input class="input is-warning" id="password_user" name="password_user" type="password" placeholder="Introduce tu contraseña">
-                                </div>
+                            <label for="password_user" id="password_user" name="password_user"
+                                class="label">Contraseña</label>
+                            <div class="control">
+                                <input class="input is-warning" id="password_user" name="password_user" type="password"
+                                    placeholder="Introduce tu contraseña">
+                            </div>
+
+                            <div class="block"></div>
+
+                            <label for="imagen_user" id="imagen_user" name="imagen_user" class="label">Imagen</label>
+                            <div id="imagen_user" class="file has-name">
+                                <label class="file-label">
+                                    <input class="file-input" type="file" id="myimagen" name="myimagen">
+                                    <span class="file-cta">
+                                        <span class="file-icon">
+                                            <i class="fas fa-upload"></i>
+                                        </span>
+                                        <span class="file-label">
+                                            Choose a file…
+                                        </span>
+                                    </span>
+                                    <span class="file-name">
+                                        Ningún archivo seleccionado
+                                    </span>
+                                </label>
+                            </div>
                     </div>
                     <div class="block"></div>
                     <div class="block"></div><button id="checar" class="button is-warning">Registrar</button></form>
@@ -36,4 +60,13 @@
     </div>
     <div class="block"></div>
     <br>
-<%- include('includes/foot.ejs') %>
+    <script>
+        const fileInput = document.querySelector('#imagen_user input[type=file]');
+        fileInput.onchange = () => {
+            if (fileInput.files.length > 0) {
+                const fileName = document.querySelector('#imagen_user .file-name');
+                fileName.textContent = fileInput.files[0].name;
+            }
+        }
+    </script>
+    <%- include('includes/foot.ejs') %>

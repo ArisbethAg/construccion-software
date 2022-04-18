@@ -1,8 +1,15 @@
-# Build and Release Folders
+
+
+ Build and Release Folders
 bin-debug/
 bin-release/
 [Oo]bj/
 [Bb]in/
+
+# Node artifact files
+node_modules/
+dist/
+uploads/
 
 # Other files and folders
 .settings/
